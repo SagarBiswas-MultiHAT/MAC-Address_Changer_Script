@@ -24,7 +24,7 @@ Make sure these dependencies are installed on your system before running the scr
 To run the script, use the following command:
 
 ```bash
-python3 change_mac.py
+python change_mac.py
 ```
 
 The script will guide you through the following steps:
