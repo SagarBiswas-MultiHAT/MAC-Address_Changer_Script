@@ -65,8 +65,4 @@ The script begins by checking if the user has root privileges, as modifying the 
 
 Feel free to contribute! If you'd like to add new features, improve existing functionality, or fix bugs, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
