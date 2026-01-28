@@ -391,3 +391,17 @@ If you understand this README,
 you understand **the entire project**.
 
 That’s intentional.
+
+---
+
+## Explaining this project in 60 seconds”
+
+This project is a production-grade MAC address management tool for Linux written in Python.
+
+It allows users to safely view, change, randomize, and restore MAC addresses on any network interface without hardcoding values or relying on deprecated tools.
+
+The script uses modern iproute2 commands, enforces root privileges, validates MAC formats, and automatically backs up the original hardware MAC so changes are fully reversible.
+
+Random MACs are generated correctly as locally-administered unicast addresses, which avoids network conflicts and follows industry standards.
+
+I built this project to learn how real system-level security tools should behave — with safety, clarity, and predictable outcomes — not just how to make something work.
