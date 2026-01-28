@@ -12,63 +12,63 @@ This project is built for **learning, privacy testing, wireless security labs, a
 
 ```
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ chmod +x main-v1.2.py
+└─$ chmod +x macchanger_pro.py
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py --list
+└─$ sudo python3 macchanger_pro.py --list
 Interfaces and MACs:
   eth0: 00:17:5d:39:2b:3b
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py --interface eth0 --show
+└─$ sudo python3 macchanger_pro.py --interface eth0 --show
 eth0 current MAC: 00:17:5d:39:2b:3b
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py -i eth0 --set aa:bb:cc:dd:ee:ff
+└─$ sudo python3 macchanger_pro.py -i eth0 --set aa:bb:cc:dd:ee:ff
 Apply MAC aa:bb:cc:dd:ee:ff to interface eth0? [y/N]: y
 2026-01-28 13:18:34,425 [INFO] Setting MAC for eth0 -> aa:bb:cc:dd:ee:ff
 MAC successfully changed for eth0. New MAC: aa:bb:cc:dd:ee:ff
 2026-01-28 13:18:34,444 [INFO] Operation completed.
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py --interface eth0 --show
+└─$ sudo python3 macchanger_pro.py --interface eth0 --show
 eth0 current MAC: aa:bb:cc:dd:ee:ff
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py -i eth0 --random
+└─$ sudo python3 macchanger_pro.py -i eth0 --random
 Apply MAC 8a:12:2e:76:8a:36 to interface eth0? [y/N]: y
 2026-01-28 13:19:00,269 [INFO] Setting MAC for eth0 -> 8a:12:2e:76:8a:36
 MAC successfully changed for eth0. New MAC: 8a:12:2e:76:8a:36
 2026-01-28 13:19:00,289 [INFO] Operation completed.
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py --interface eth0 --show
+└─$ sudo python3 macchanger_pro.py --interface eth0 --show
 eth0 current MAC: 8a:12:2e:76:8a:36
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py -i eth0 --restore
+└─$ sudo python3 macchanger_pro.py -i eth0 --restore
 Restore original MAC for eth0? [y/N]: y
 2026-01-28 13:19:17,765 [INFO] Restoring MAC for eth0 -> 00:17:5d:39:2b:3b
 Restored original MAC for eth0. Current: 00:17:5d:39:2b:3b
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py --interface eth0 --show
+└─$ sudo python3 macchanger_pro.py --interface eth0 --show
 eth0 current MAC: 00:17:5d:39:2b:3b
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py -i eth0 -r -y
+└─$ sudo python3 macchanger_pro.py -i eth0 -r -y
 2026-01-28 13:19:46,170 [INFO] Setting MAC for eth0 -> 8a:7e:11:78:6c:a4
 MAC successfully changed for eth0. New MAC: 8a:7e:11:78:6c:a4
 2026-01-28 13:19:46,187 [INFO] Operation completed.
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py -i eth0
+└─$ sudo python3 macchanger_pro.py -i eth0
 Selected interface: eth0 (current MAC: 8a:7e:11:78:6c:a4)
 Enter new MAC (or 'random' to generate, 'restore' to restore original): --show
 2026-01-28 13:21:04,283 [ERROR] Invalid MAC format: --show
 
 ┌──(BlackHAT㉿HP-SAGAR)-[/mnt/h/GitHub Clone/MAC-Address_Changer_Script]
-└─$ sudo python3 main-v1.2.py -i eth0
+└─$ sudo python3 macchanger_pro.py -i eth0
 Selected interface: eth0 (current MAC: 8a:7e:11:78:6c:a4)
 Enter new MAC (or 'random' to generate, 'restore' to restore original): restore
 2026-01-28 13:21:21,594 [INFO] Restoring MAC for eth0 -> 00:17:5d:39:2b:3b
@@ -154,19 +154,19 @@ cd macchanger_pro
 Make the script executable (optional but convenient):
 
 ```bash
-chmod +x main-v1.2.py
+chmod +x macchanger_pro.py
 ```
 
 ---
 
 ## 📖 Usage Guide
 
-> The main script is [main-v1.2.py](main-v1.2.py). You can run it directly with `python3`.
+> The main script is [macchanger_pro.py](macchanger_pro.py). You can run it directly with `python3`.
 
 ### 1️⃣ List Available Network Interfaces
 
 ```bash
-sudo python3 main-v1.2.py --list
+sudo python3 macchanger_pro.py --list
 ```
 
 Example output:
@@ -182,7 +182,7 @@ Interfaces and MACs:
 ### 2️⃣ Show Current MAC Address
 
 ```bash
-sudo python3 main-v1.2.py --interface eth0 --show
+sudo python3 macchanger_pro.py --interface eth0 --show
 ```
 
 ---
@@ -190,7 +190,7 @@ sudo python3 main-v1.2.py --interface eth0 --show
 ### 3️⃣ Set a Custom MAC Address
 
 ```bash
-sudo python3 main-v1.2.py -i eth0 --set aa:bb:cc:dd:ee:ff
+sudo python3 macchanger_pro.py -i eth0 --set aa:bb:cc:dd:ee:ff
 ```
 
 ✔ Format is strictly validated
@@ -201,7 +201,7 @@ sudo python3 main-v1.2.py -i eth0 --set aa:bb:cc:dd:ee:ff
 ### 4️⃣ Apply a Random MAC Address (Recommended)
 
 ```bash
-sudo python3 main-v1.2.py -i eth0 --random
+sudo python3 macchanger_pro.py -i eth0 --random
 ```
 
 The generated MAC is:
@@ -217,7 +217,7 @@ This avoids vendor conflicts and network issues.
 ### 5️⃣ Restore the Original MAC Address
 
 ```bash
-sudo python3 main-v1.2.py -i eth0 --restore
+sudo python3 macchanger_pro.py -i eth0 --restore
 ```
 
 ✔ Restores the backed‑up hardware MAC
@@ -228,7 +228,7 @@ sudo python3 main-v1.2.py -i eth0 --restore
 ### 6️⃣ Non‑Interactive Mode (Automation)
 
 ```bash
-sudo python3 main-v1.2.py -i eth0 -r -y
+sudo python3 macchanger_pro.py -i eth0 -r -y
 ```
 
 Perfect for:
@@ -244,7 +244,7 @@ Perfect for:
 If you run the tool without `--set`, `--random`, or `--restore`, it will guide you:
 
 ```bash
-sudo python3 main-v1.2.py -i eth0
+sudo python3 macchanger_pro.py -i eth0
 ```
 
 You’ll be prompted to enter a MAC, type `random`, or type `restore`.
@@ -371,7 +371,7 @@ Possible future enhancements:
 
 ## 📂 Project Structure
 
-- [main-v1.2.py](main-v1.2.py) — the complete MAC management tool
+- [macchanger_pro.py](macchanger_pro.py) — the complete MAC management tool
 - [README.md](README.md) — full documentation (this file)
 
 ---
