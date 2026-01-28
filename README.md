@@ -147,7 +147,7 @@ Optional fallback (legacy systems only):
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/macchanger_pro.git
+git clone https://github.com/SagarBiswas-MultiHAT/MAC-Changer.git
 cd macchanger_pro
 ```
 
